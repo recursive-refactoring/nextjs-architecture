@@ -1,76 +1,66 @@
-import { LinearProgressVariantsT } from "@/types/constants/ui";
+import {
+  AccordionVariantsI,
+  AvatarVariantsI,
+  ButtonTypesI,
+  ChipShapeI,
+  ChipVariantsI,
+  CircularProgressVariantsI,
+  LinearProgressVariantsI,
+  SkeletonTypesI,
+  SkeletonVariantsI,
+} from "@/interfaces/constants/ui";
 
-export const LINEAR_PROGRESS_VARIANTS: LinearProgressVariantsT = {
+export const LINEAR_PROGRESS_VARIANTS: LinearProgressVariantsI = {
   DETERMINATE: "determinate",
   IN_DETERMINATE: "indeterminate",
   BUFFER: "buffer",
 };
 
-export const CIRCULAR_PROGRESS_VARIANTS = {
+export const CIRCULAR_PROGRESS_VARIANTS: CircularProgressVariantsI = {
   DETERMINATE: "determinate",
   IN_DETERMINATE: "indeterminate",
 };
 
-export const AVATAR_VARIANTS: any = {
+export const AVATAR_VARIANTS: AvatarVariantsI = {
   CIRCULAR: "circular",
   SQUARE: "square",
   ROUNDED: "rounded",
 };
 
-export const CHIP_VARIANTS: any = {
+export const CHIP_VARIANTS: ChipVariantsI = {
   FILLED: "filled",
   OUTLINED: "outlined",
 };
 
-export const CHIP_SHAPE: any = {
+export const CHIP_SHAPE: ChipShapeI = {
   OVAL: "oval",
   ROUNDED: "rounded",
   SQUARE: "square",
 };
 
-export const ACCORDION_VARIANTS = {
+export const ACCORDION_VARIANTS: AccordionVariantsI = {
   SECONDARY: "secondary",
   INHERIT: "inherit",
   TERTIARY: "tertiary",
   CARD: "card",
 };
 
-export const ACCORDION_ACTIONS = {
-  VIEW: "view",
-  EDIT: "edit",
-  DELETE: "delete",
-};
-
-export const SKELETON_TYPES = {
+export const SKELETON_TYPES: SkeletonTypesI = {
   FORM: "form",
   TABLE: "table",
   BARS: "bars",
   BASIC_CARD: "basic-card",
-  MEDIUM_HORIZONTAL_TWO_LAYER_ROUNDED_CARD:
-    "medium-horizontal-two-layer-rounded-card",
-  LARGE_VERTICAL_TWO_LAYER_DOUBLE_CARD: "large-vertical-two-layer-double-card",
-  SMALL_HORIZONTAL_TWO_LAYER_CIRCULAR_CARD:
-    "small-horizontal-two-layer-circular-card",
-  VERTICAL_TWO_LAYER_DOUBLE_CIRCULAR_LARGE_CARD:
-    "vertical-two-layer-double-circular-large-card",
-  THREE_LAYER_BIG_LARGE_CARD: "three-layer-big-large-card",
-  TWO_LAYER_CARD: "two-layer-card",
-  THREE_LAYER_LARGE_REVERSE_CARD: "three-layer-reverse-card",
   GRID: "grid",
   ITEM: "item",
 };
 
-export const SKELETON_VARIANTS: any = {
+export const SKELETON_VARIANTS: SkeletonVariantsI = {
   CIRCULAR: "circular",
   ROUNDED: "rounded",
   SQUARE: "square",
 };
 
-export const PROGRESS_VALUE = {
-  ZERO: 0,
-};
-
-export const CUSTOM_BUTTON_TYPES: any = {
+export const BUTTON_TYPES: ButtonTypesI = {
   FILTER: "filter",
   RESTORE: "restore",
   CUSTOMIZE: "customize",

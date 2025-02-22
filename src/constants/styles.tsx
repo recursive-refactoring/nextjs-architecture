@@ -1,1 +1,1 @@
-export const ONE_REM_TO_PX = 16;
+export const ONE_REM_TO_PX: number = 16;
