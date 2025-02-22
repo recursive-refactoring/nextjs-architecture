@@ -1,3 +1,9 @@
+import { HomeFeature } from "@/features/home";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <>
+      <HomeFeature />
+    </>
+  );
 }
