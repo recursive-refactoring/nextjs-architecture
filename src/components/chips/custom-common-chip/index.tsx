@@ -1,5 +1,5 @@
 import { Chip } from "@mui/material";
-import { CustomCommonChipPropsI } from "../Chip.interface";
+import { CustomCommonChipPropsI } from "../chips.interface";
 import { CHIP_SHAPE, CHIP_VARIANTS } from "@/constants/ui";
 
 const mapBorderRadius = {

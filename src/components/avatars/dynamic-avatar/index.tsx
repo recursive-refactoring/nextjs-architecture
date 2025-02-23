@@ -4,7 +4,7 @@ import { generateImage } from "@/utils/avatars";
 import { pxToRem } from "@/utils/styles";
 import { Avatar, Typography } from "@mui/material";
 import { DynamicAvatarPropsI } from "../Avatars.interface";
-import { CustomCommonTooltip } from "@/components/data-display/custom-common-tooltip";
+import { CustomCommonTooltip } from "@/components/data-displays/custom-common-tooltip";
 
 export const DynamicAvatar = (props: DynamicAvatarPropsI) => {
   const {

@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { RecordCountChipPropsI } from "../Chip.interface";
+import { RecordCountChipPropsI } from "../chips.interface";
 import { CustomCommonChip } from "../custom-common-chip";
 import { CHIP_SHAPE } from "@/constants/ui";
 import { SELECTED_ARRAY_LENGTH } from "@/constants/array";

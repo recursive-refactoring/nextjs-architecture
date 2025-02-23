@@ -1,6 +1,6 @@
 import { Box, Chip, Typography } from "@mui/material";
-import { TooltipItemsCountChipPropsI } from "../Chip.interface";
-import { CustomCommonTooltip } from "@/components/data-display/custom-common-tooltip";
+import { TooltipItemsCountChipPropsI } from "../chips.interface";
+import { CustomCommonTooltip } from "@/components/data-displays/custom-common-tooltip";
 
 export const TooltipItemsCountChip = (props: TooltipItemsCountChipPropsI) => {
   const { data = [] } = props;
