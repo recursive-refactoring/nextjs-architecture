@@ -4,7 +4,7 @@ import { CustomCommonChip } from "../custom-common-chip";
 import { CHIP_SHAPE } from "@/constants/ui";
 import { SELECTED_ARRAY_LENGTH } from "@/constants/array";
 import { Variant } from "@mui/material/styles/createTypography";
-import { CustomCommonCircularProgress } from "@/components/avatars/progress-bars/custom-common-circular-progress";
+import { CustomCommonCircularProgress } from "@/components/progress-bars/custom-common-circular-progress";
 
 export const RecordCountChip = (props: RecordCountChipPropsI) => {
   const {
