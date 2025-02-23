@@ -24,6 +24,7 @@ export type ButtonIconTypeType =
   | "success"
   | "reject";
 
+export type SingleDropdownButtonCloseMenuType = (e?: any) => void;
 export interface AddNewItemButtonPropsI {
   disabled?: boolean;
   variant?: ButtonVariantType;
@@ -137,21 +138,27 @@ export interface ActionsLoadingButtonPropsI {
 export interface SingleDropdownButtonPropsI {
   dropdownOptions: any[];
   disabled?: boolean;
-  dropdownName?: string | Element;
+  dropdownName?: string | ReactNode;
   hasEndIcon?: boolean;
-  btnVariant?: string;
-  Variant?: any;
+  btnVariant?: ButtonVariantType;
   menuSxProps?: any;
   [key: string]: any;
 }
 
-export type SingleDropdownButtonCloseMenuI = (e?: any) => void;
+export interface SingleDropdownIconButtonPropsI {
+  dropdownOptions: any[];
+  disabled?: boolean;
+  dropdownName?: ReactNode;
+  btnVariant?: ButtonVariantType;
+  menuSxProps?: any;
+  [key: string]: any;
+}
 
 export interface SingleDropdownOptionI {
   permissionKey: string[];
   id: string | number;
   title: string;
-  handleClick: (closeMenu: SingleDropdownButtonCloseMenuI) => void;
+  handleClick: (closeMenu: SingleDropdownButtonCloseMenuType) => void;
   disabled?: boolean;
   titleSx?: { [key: string]: string | number };
   hasNoPermission?: boolean;

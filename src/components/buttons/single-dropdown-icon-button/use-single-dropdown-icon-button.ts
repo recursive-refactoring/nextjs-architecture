@@ -2,7 +2,7 @@ import { Theme, useTheme } from "@mui/material";
 import { useState } from "react";
 import { SingleDropdownButtonCloseMenuType } from "../buttons.interface";
 
-export const useSingleDropdownButton = () => {
+export const useSingleDropdownIconButton = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open: boolean = Boolean(anchorEl);
   const theme: Theme = useTheme();

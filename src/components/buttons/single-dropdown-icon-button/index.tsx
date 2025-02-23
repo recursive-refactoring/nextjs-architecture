@@ -1,34 +1,33 @@
-import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Typography from "@mui/material/Typography";
-import { useSingleDropdownButton } from "./use-single-dropdown-button";
+import { IconButton, Typography } from "@mui/material";
+
 import { Fragment } from "react";
 import {
-  SingleDropdownButtonPropsI,
+  SingleDropdownIconButtonPropsI,
   SingleDropdownOptionI,
 } from "../buttons.interface";
+import { useSingleDropdownIconButton } from "./use-single-dropdown-icon-button";
+import { MoreHoriz } from "@mui/icons-material";
 
-export const SingleDropdownButton = (props: SingleDropdownButtonPropsI) => {
+export const SingleDropdownIconButton = (
+  props: SingleDropdownIconButtonPropsI,
+) => {
   const {
     dropdownOptions,
     disabled,
-    dropdownName = "Actions",
-    hasEndIcon = true,
-    btnVariant = "outlined",
+    dropdownName = <MoreHoriz />,
     menuSxProps,
     buttonLabel = `action`,
   } = props;
 
   const { anchorEl, open, theme, handleClick, handleClose } =
-    useSingleDropdownButton();
+    useSingleDropdownIconButton();
 
   return (
     <>
-      <Button
+      <IconButton
         className="small"
-        variant={btnVariant}
         id="demo-positioned-button"
         aria-controls={open ? "demo-positioned-menu" : undefined}
         aria-haspopup="true"
@@ -38,10 +37,9 @@ export const SingleDropdownButton = (props: SingleDropdownButtonPropsI) => {
         disabled={disabled}
         aria-label={buttonLabel}
         sx={{ textTransform: "capitalize" }}
-        endIcon={hasEndIcon && <ArrowDropDownIcon />}
       >
         {dropdownName}
-      </Button>
+      </IconButton>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
