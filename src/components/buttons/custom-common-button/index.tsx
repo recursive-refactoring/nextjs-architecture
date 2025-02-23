@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@mui/material";
 import { CustomButtonPropsI } from "../buttons.interface";
 import { Cancel, CheckCircle, Visibility } from "@mui/icons-material";

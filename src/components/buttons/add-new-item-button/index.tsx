@@ -1,3 +1,4 @@
+"use client";
 import { AddBox, AddCircle } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { AddNewItemButtonPropsI } from "../buttons.interface";

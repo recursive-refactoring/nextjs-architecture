@@ -1,3 +1,5 @@
+"use client";
+
 import { Box } from "@mui/material";
 import { CustomLoadingButton } from "../custom-loading-button";
 import { ActionsLoadingButtonPropsI } from "../buttons.interface";
