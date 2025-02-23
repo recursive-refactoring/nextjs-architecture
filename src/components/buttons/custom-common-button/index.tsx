@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@mui/material";
-import { CustomButtonPropsI } from "../buttons.interface";
+import { CustomCommonButtonPropsI } from "../buttons.interface";
 import { Cancel, CheckCircle, Visibility } from "@mui/icons-material";
 import { BUTTON_CATEGORIES } from "@/constants/ui";
 
@@ -11,7 +11,7 @@ const mappedIcon: any = {
   [BUTTON_CATEGORIES?.PREVIEW]: <Visibility />,
 };
 
-export const CustomCommonButton = (props: CustomButtonPropsI) => {
+export const CustomCommonButton = (props: CustomCommonButtonPropsI) => {
   const {
     children,
     onClick,

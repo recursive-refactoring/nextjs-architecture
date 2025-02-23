@@ -1,4 +1,3 @@
-import { SxProps, Theme } from "@mui/system";
 import { ReactNode } from "react";
 
 export type ButtonColorI =
@@ -35,7 +34,8 @@ export interface AddNewItemButtonPropsI {
   hasEndIcon?: boolean;
   iconType?: ButtonIconTypeI;
   size?: ButtonSizeI;
-  customStyles?: SxProps<Theme>;
+  customStyles?: any;
+  children?: ReactNode;
 }
 
 export interface ApiPollingButtonPropsI {
@@ -43,14 +43,14 @@ export interface ApiPollingButtonPropsI {
   showLoader: boolean;
   variant?: ButtonVariantI;
   isSmall?: boolean;
-  customStyles?: SxProps<Theme>;
+  customStyles?: any;
   isFetching: boolean;
   fulfilledTimeStamp?: number;
   intervalTime: number;
   buttonLabel?: string;
 }
 
-export interface CustomButtonPropsI {
+export interface CustomCommonButtonPropsI {
   children: ReactNode;
   onClick?: () => void;
   variant?: ButtonVariantI;
@@ -60,7 +60,7 @@ export interface CustomButtonPropsI {
   disabled?: boolean;
   className?: string;
   fullWidth?: boolean;
-  customStyles?: any | SxProps<Theme>;
+  customStyles?: any;
   type?: ButtonTypeI;
   primary?: boolean;
 }
@@ -68,7 +68,7 @@ export interface CustomButtonPropsI {
 export interface CustomIconButtonPropsI {
   onClick: any;
   color?: ButtonColorI;
-  customStyles?: SxProps<Theme>;
+  customStyles?: any;
   children: ReactNode;
   hasIcon?: boolean;
   disabled?: boolean;
@@ -82,7 +82,7 @@ export interface CustomLoadingButtonPropsI {
   onClick?: (...arg: any) => void;
   children: ReactNode;
   color?: ButtonColorI;
-  customStyles?: any | SxProps<Theme>;
+  customStyles?: any | any;
   disabled?: boolean;
   loading?: boolean;
   size?: ButtonSizeI;

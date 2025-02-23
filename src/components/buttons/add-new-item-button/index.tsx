@@ -20,6 +20,7 @@ export const AddNewItemButton = (props: AddNewItemButtonPropsI) => {
     iconType = "circle",
     size = "medium",
     customStyles = {},
+    children,
   } = props;
 
   const MapIcon = mappedIcon?.[iconType];
@@ -37,12 +38,12 @@ export const AddNewItemButton = (props: AddNewItemButtonPropsI) => {
       onClick={() => onClick?.()}
       sx={{
         "& .MuiButton-startIcon": {
-          ...(!!name ? {} : { marginRight: 0, marginLeft: 0 }),
+          ...(!!children ? {} : { marginRight: 0, marginLeft: 0 }),
         },
         ...customStyles,
       }}
     >
-      {name}
+      {children}
     </Button>
   );
 };
