@@ -1,6 +1,6 @@
 import { Tooltip } from "@mui/material";
 
-export const CustomTooltip = (props: any) => {
+export const CustomCommonTooltip = (props: any) => {
   const {
     title = "",
     children,

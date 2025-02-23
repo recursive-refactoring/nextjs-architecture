@@ -4,7 +4,7 @@ import { generateImage } from "@/utils/avatars";
 import { pxToRem } from "@/utils/styles";
 import { Avatar, Typography } from "@mui/material";
 import { DynamicAvatarPropsI } from "../Avatars.interface";
-import { CustomTooltip } from "@/components/data-display/custom-tooltip";
+import { CustomCommonTooltip } from "@/components/data-display/custom-common-tooltip";
 
 export const DynamicAvatar = (props: DynamicAvatarPropsI) => {
   const {
@@ -28,7 +28,7 @@ export const DynamicAvatar = (props: DynamicAvatarPropsI) => {
       : (((height as number) / 3) as number);
 
   return (
-    <CustomTooltip title={tooltipTitle} isCapital {...customTooltipProps}>
+    <CustomCommonTooltip title={tooltipTitle} isCapital {...customTooltipProps}>
       <Avatar
         sx={{
           backgroundColor,
@@ -53,6 +53,6 @@ export const DynamicAvatar = (props: DynamicAvatarPropsI) => {
           </Typography>
         )}
       </Avatar>
-    </CustomTooltip>
+    </CustomCommonTooltip>
   );
 };
