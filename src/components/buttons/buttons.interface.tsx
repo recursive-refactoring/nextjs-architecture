@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type ButtonColorI =
+export type ButtonColorType =
   | "inherit"
   | "primary"
   | "secondary"
@@ -9,13 +9,13 @@ export type ButtonColorI =
   | "warning"
   | "info";
 
-export type ButtonVariantI = "text" | "outlined" | "contained";
+export type ButtonVariantType = "text" | "outlined" | "contained";
 
-export type ButtonSizeI = "small" | "medium" | "large";
+export type ButtonSizeType = "small" | "medium" | "large";
 
-export type ButtonTypeI = "submit" | "button" | "reset";
+export type ButtonTypeType = "submit" | "button" | "reset";
 
-export type ButtonIconTypeI =
+export type ButtonIconTypeType =
   | "circle"
   | "square"
   | "filter"
@@ -26,14 +26,14 @@ export type ButtonIconTypeI =
 
 export interface AddNewItemButtonPropsI {
   disabled?: boolean;
-  variant?: ButtonVariantI;
+  variant?: ButtonVariantType;
   name?: string;
-  color?: ButtonColorI;
+  color?: ButtonColorType;
   onClick?: () => void;
   hasStartIcon?: boolean;
   hasEndIcon?: boolean;
-  iconType?: ButtonIconTypeI;
-  size?: ButtonSizeI;
+  iconType?: ButtonIconTypeType;
+  size?: ButtonSizeType;
   customStyles?: any;
   children?: ReactNode;
 }
@@ -41,7 +41,7 @@ export interface AddNewItemButtonPropsI {
 export interface ApiPollingButtonPropsI {
   onClick: () => void;
   showLoader: boolean;
-  variant?: ButtonVariantI;
+  variant?: ButtonVariantType;
   isSmall?: boolean;
   customStyles?: any;
   isFetching: boolean;
@@ -53,41 +53,41 @@ export interface ApiPollingButtonPropsI {
 export interface CustomCommonButtonPropsI {
   children: ReactNode;
   onClick?: () => void;
-  variant?: ButtonVariantI;
-  color?: ButtonColorI;
-  iconType?: ButtonIconTypeI;
+  variant?: ButtonVariantType;
+  color?: ButtonColorType;
+  iconType?: ButtonIconTypeType;
   hasIcon?: boolean;
   disabled?: boolean;
   className?: string;
   fullWidth?: boolean;
   customStyles?: any;
-  type?: ButtonTypeI;
+  type?: ButtonTypeType;
   primary?: boolean;
 }
 
 export interface CustomIconButtonPropsI {
   onClick: any;
-  color?: ButtonColorI;
+  color?: ButtonColorType;
   customStyles?: any;
   children: ReactNode;
   hasIcon?: boolean;
   disabled?: boolean;
   iconType?: string;
-  size?: ButtonSizeI;
-  type?: ButtonTypeI;
+  size?: ButtonSizeType;
+  type?: ButtonTypeType;
   iconName?: string;
 }
 
 export interface CustomLoadingButtonPropsI {
   onClick?: (...arg: any) => void;
   children: ReactNode;
-  color?: ButtonColorI;
+  color?: ButtonColorType;
   customStyles?: any | any;
   disabled?: boolean;
   loading?: boolean;
-  size?: ButtonSizeI;
-  type?: ButtonTypeI;
-  variant?: ButtonVariantI;
+  size?: ButtonSizeType;
+  type?: ButtonTypeType;
+  variant?: ButtonVariantType;
   className?: string;
   primary?: boolean;
   fullWidth?: boolean;
@@ -96,10 +96,10 @@ export interface CustomLoadingButtonPropsI {
 }
 
 export interface DownloadButtonPropsI {
-  color?: ButtonColorI;
+  color?: ButtonColorType;
   disabled?: boolean;
   hasStyles?: boolean;
-  variant?: ButtonVariantI;
+  variant?: ButtonVariantType;
   children?: ReactNode;
   downloadRef?: any;
   downloadFileType?: string;
@@ -107,8 +107,8 @@ export interface DownloadButtonPropsI {
 }
 
 export interface LinkButtonPropsI {
-  color?: ButtonColorI;
-  variant?: ButtonVariantI;
+  color?: ButtonColorType;
+  variant?: ButtonVariantType;
   link?: string;
   name: string;
   customStyles?: any;
@@ -117,7 +117,7 @@ export interface LinkButtonPropsI {
 export interface ExportButtonPropsI {
   handleCsvExport: () => void;
   handleExcelExport: () => void;
-  btnVariant?: ButtonVariantI;
+  btnVariant?: ButtonVariantType;
   btnText?: string;
 }
 
