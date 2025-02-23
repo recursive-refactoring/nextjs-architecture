@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
+import { FlexLayoutPropsI } from "../layouts.interface";
 
-export const FlexLayout = (props: any) => {
+export const FlexLayout = (props: FlexLayoutPropsI) => {
   const {
     alignItems = "center",
     justifyContent = "flex-start",
