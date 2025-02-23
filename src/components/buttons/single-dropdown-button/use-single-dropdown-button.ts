@@ -1,3 +1,5 @@
+"use client";
+
 import { Theme, useTheme } from "@mui/material";
 import { useState } from "react";
 import { SingleDropdownButtonCloseMenuType } from "../buttons.interface";

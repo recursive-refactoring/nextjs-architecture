@@ -1,5 +1,6 @@
-import { useTheme } from '@mui/material';
-import { useState } from 'react';
+"use client";
+import { useTheme } from "@mui/material";
+import { useState } from "react";
 
 export const useExportButton = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

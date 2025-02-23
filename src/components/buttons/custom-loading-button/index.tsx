@@ -1,3 +1,4 @@
+"use client";
 import { LoadingButton } from "@mui/lab";
 import { CustomLoadingButtonPropsI } from "../buttons.interface";
 

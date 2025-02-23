@@ -1,3 +1,4 @@
+"use client";
 import { Typography, Button, Menu, MenuItem } from "@mui/material";
 import { useExportButton } from "./use-export-button";
 import { ExportButtonPropsI } from "../buttons.interface";
