@@ -1,5 +1,5 @@
 import { pxToRem } from "@/utils/styles";
-import { responsiveFontSizes } from "@/utils/ui-lib";
+import { responsiveFontSizes } from "@/utils/ui";
 
 const FONT_FAMILY = "Rajdhani";
 

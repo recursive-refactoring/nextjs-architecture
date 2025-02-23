@@ -2,6 +2,13 @@ export const ACCEPT_FILE_EXTENSIONS = {
   PNG: [".png", ".PNG"],
   JPEG: [".jpg", ".jpeg", ".JPG", ".JPEG"],
   PDF: [".pdf"],
+  DOC: [".doc"],
+  DOCX: [".docx"],
+  MP3: [".mp3"],
+  WAV: [".wav"],
+  MP4: [".mp4"],
+  SVG: [".svg"],
+  CSV: [".csv"],
 };
 
 export const ATTACHMENT_FILE_TYPE = {
@@ -39,4 +46,11 @@ export const IMPORT_FILE_TYPE = {
 export const DOWNLOAD_FILE_TYPE = {
   PDF: "PDF",
   PNG: "PNG",
+};
+
+export const FILE_SIZE_UNITS = {
+  B: 1,
+  KB: 1024,
+  MB: 1024 * 1024,
+  GB: 1024 * 1024 * 1024,
 };
