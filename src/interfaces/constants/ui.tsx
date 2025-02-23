@@ -1,58 +1,94 @@
+export type LinearProgressVariantsType =
+  | "determinate"
+  | "indeterminate"
+  | "buffer";
+
+export type CircularProgressVariantsType = "determinate" | "indeterminate";
+
+export type AvatarVariantsType = "circular" | "rounded" | "square";
+
+export type ChipVariantsType = "filled" | "outlined";
+
+export type ChipShapeType = "oval" | "rounded" | "square";
+
+export type AccordionVariantsType = "secondary" | "inherit" | "card";
+
+export type SkeletonTypesType =
+  | "form"
+  | "table"
+  | "bars"
+  | "card"
+  | "grid"
+  | "item";
+
+export type SkeletonVariantsType =
+  | "circular"
+  | "rectangular"
+  | "square"
+  | "rounded";
+
+export type ButtonCategoriesType =
+  | "filter"
+  | "restore"
+  | "customize"
+  | "success"
+  | "reject"
+  | "preview";
+
 export interface LinearProgressVariantsI {
-  DETERMINATE: string;
-  IN_DETERMINATE: string;
-  BUFFER: string;
+  DETERMINATE: LinearProgressVariantsType;
+  IN_DETERMINATE: LinearProgressVariantsType;
+  BUFFER: LinearProgressVariantsType;
 }
 
 export interface CircularProgressVariantsI {
-  DETERMINATE: string;
-  IN_DETERMINATE: string;
+  DETERMINATE: CircularProgressVariantsType;
+  IN_DETERMINATE: CircularProgressVariantsType;
 }
 
 export interface AvatarVariantsI {
-  CIRCULAR: string;
-  SQUARE: string;
-  ROUNDED: string;
+  CIRCULAR: AvatarVariantsType;
+  SQUARE: AvatarVariantsType;
+  ROUNDED: AvatarVariantsType;
 }
 
 export interface ChipVariantsI {
-  FILLED: string;
-  OUTLINED: string;
+  FILLED: ChipVariantsType;
+  OUTLINED: ChipVariantsType;
 }
 
 export interface ChipShapeI {
-  OVAL: string;
-  ROUNDED: string;
-  SQUARE: string;
+  OVAL: ChipShapeType;
+  ROUNDED: ChipShapeType;
+  SQUARE: ChipShapeType;
 }
 
 export interface AccordionVariantsI {
-  SECONDARY: string;
-  INHERIT: string;
-  TERTIARY: string;
-  CARD: string;
+  SECONDARY: AccordionVariantsType;
+  INHERIT: AccordionVariantsType;
+  CARD: AccordionVariantsType;
 }
 
 export interface SkeletonTypesI {
-  FORM: string;
-  TABLE: string;
-  BARS: string;
-  BASIC_CARD: string;
-  GRID: string;
-  ITEM: string;
+  BARS: SkeletonTypesType;
+  FORM: SkeletonTypesType;
+  TABLE: SkeletonTypesType;
+  CARD: SkeletonTypesType;
+  GRID: SkeletonTypesType;
+  ITEM: SkeletonTypesType;
 }
 
 export interface SkeletonVariantsI {
-  CIRCULAR: string;
-  ROUNDED: string;
-  SQUARE: string;
+  CIRCULAR: SkeletonVariantsType;
+  ROUNDED: SkeletonVariantsType;
+  SQUARE: SkeletonVariantsType;
 }
 
-export interface ButtonTypesI {
-  FILTER: string;
-  RESTORE: string;
-  CUSTOMIZE: string;
-  SUCCESS: string;
-  REJECT: string;
-  PREVIEW: string;
+export interface ButtonCategoriesI {
+  FILTER: ButtonCategoriesType;
+  RESTORE: ButtonCategoriesType;
+  CUSTOMIZE: ButtonCategoriesType;
+  SUCCESS: ButtonCategoriesType;
+  REJECT: ButtonCategoriesType;
+  PREVIEW: ButtonCategoriesType;
 }

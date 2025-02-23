@@ -1,7 +1,7 @@
 import {
   AccordionVariantsI,
   AvatarVariantsI,
-  ButtonTypesI,
+  ButtonCategoriesI,
   ChipShapeI,
   ChipVariantsI,
   CircularProgressVariantsI,
@@ -41,7 +41,6 @@ export const CHIP_SHAPE: ChipShapeI = {
 export const ACCORDION_VARIANTS: AccordionVariantsI = {
   SECONDARY: "secondary",
   INHERIT: "inherit",
-  TERTIARY: "tertiary",
   CARD: "card",
 };
 
@@ -49,7 +48,7 @@ export const SKELETON_TYPES: SkeletonTypesI = {
   FORM: "form",
   TABLE: "table",
   BARS: "bars",
-  BASIC_CARD: "basic-card",
+  CARD: "card",
   GRID: "grid",
   ITEM: "item",
 };
@@ -60,7 +59,7 @@ export const SKELETON_VARIANTS: SkeletonVariantsI = {
   SQUARE: "square",
 };
 
-export const BUTTON_TYPES: ButtonTypesI = {
+export const BUTTON_CATEGORIES: ButtonCategoriesI = {
   FILTER: "filter",
   RESTORE: "restore",
   CUSTOMIZE: "customize",

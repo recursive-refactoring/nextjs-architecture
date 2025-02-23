@@ -1,5 +1,6 @@
 "use client";
 
+import { snackBarConfig } from "@/configs/snackbar";
 import { ToastContainer } from "react-toastify";
 
 export const SnackBarProvider = (props: any) => {
@@ -8,8 +9,8 @@ export const SnackBarProvider = (props: any) => {
     <>
       {children}
       <ToastContainer
-        position="top-left"
-        autoClose={5000}
+        position={snackBarConfig?.position}
+        autoClose={snackBarConfig?.autoClose}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
