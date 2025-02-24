@@ -8,7 +8,7 @@ export interface FlexLayoutPropsI {
   children?: ReactNode;
 }
 
-export interface DividerLayoutPropsI {
+export interface SeparateLayoutPropsI {
   borderColor?: string;
   size?: number;
   py?: string;
