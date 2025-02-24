@@ -1,6 +1,6 @@
-import { ContainerGrid } from "../container-grid";
-import { ItemGrid } from "../item-grid";
+import { ContainerGridLayout } from "@/components/layouts/container-grid-layout";
 import { HeadingFormGridPropsI } from "../Grids.interface";
+import { ItemGridLayout } from "@/components/layouts/item-grid-layout";
 
 export const HeadingFormGrid = (props: HeadingFormGridPropsI) => {
   const {
@@ -14,13 +14,13 @@ export const HeadingFormGrid = (props: HeadingFormGridPropsI) => {
   } = props;
 
   return (
-    <ContainerGrid
+    <ContainerGridLayout
       spacing={spacing}
       rowSpacing={rowSpacing}
       columnSpacing={columnSpacing}
     >
       {formFieldsList?.map((form: any) => (
-        <ItemGrid
+        <ItemGridLayout
           xs={12}
           md={form?.md ?? md}
           key={form?._id}
@@ -33,9 +33,9 @@ export const HeadingFormGrid = (props: HeadingFormGridPropsI) => {
           >
             {form?.heading ? form?.heading : null}
           </form.component>
-        </ItemGrid>
+        </ItemGridLayout>
       ))}
       {children}
-    </ContainerGrid>
+    </ContainerGridLayout>
   );
 };

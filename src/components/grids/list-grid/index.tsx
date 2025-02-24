@@ -1,6 +1,6 @@
-import { ContainerGrid } from "../container-grid";
-import { ItemGrid } from "../item-grid";
 import { ListGridPropsI } from "../Grids.interface";
+import { ContainerGridLayout } from "@/components/layouts/container-grid-layout";
+import { ItemGridLayout } from "@/components/layouts/item-grid-layout";
 
 export const ListGrid = (props: ListGridPropsI) => {
   const {
@@ -14,12 +14,19 @@ export const ListGrid = (props: ListGridPropsI) => {
   } = props;
 
   return (
-    <ContainerGrid spacing={spacing}>
+    <ContainerGridLayout spacing={spacing}>
       {list?.map((singleItem: any) => (
-        <ItemGrid xs={12} sm={sm} md={md} xl={xl} lg={lg} key={singleItem?._id}>
+        <ItemGridLayout
+          xs={12}
+          sm={sm}
+          md={md}
+          xl={xl}
+          lg={lg}
+          key={singleItem?._id}
+        >
           {render(singleItem)}
-        </ItemGrid>
+        </ItemGridLayout>
       ))}
-    </ContainerGrid>
+    </ContainerGridLayout>
   );
 };

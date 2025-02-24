@@ -1,22 +1,4 @@
-import { ReactNode } from 'react';
-
-export interface CustomGridPropsI {
-  xs?: number;
-  sm?: number;
-  md?: number;
-  lg?: number;
-  xl?: number;
-  customStyles?: any;
-  children?: ReactNode;
-}
-
-export interface ContainerGridPropsI {
-  spacing?: any;
-  rowSpacing?: number;
-  columnSpacing?: number;
-  customStyles?: any;
-  children?: ReactNode;
-}
+import { ReactNode } from "react";
 
 export interface FormGridPropsI {
   formFieldsList: any[];
