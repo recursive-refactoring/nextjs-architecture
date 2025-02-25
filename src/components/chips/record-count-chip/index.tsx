@@ -10,9 +10,9 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
   const {
     isCountLoading = false,
     totalCount = 0,
-    recordName,
-    color = "secondary.main",
-    recordNameVariant = "h6",
+    name,
+    color = "common.white",
+    nameVariant = "h6",
   } = props;
 
   return (
@@ -40,8 +40,8 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
           )
         }
       />
-      <Typography variant={recordNameVariant as Variant} color={color}>
-        {recordName}
+      <Typography variant={nameVariant as Variant} color={color}>
+        {name}
       </Typography>
     </Box>
   );

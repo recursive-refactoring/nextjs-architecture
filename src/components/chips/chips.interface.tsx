@@ -31,9 +31,9 @@ export interface CustomCommonChipPropsI extends ChipProps {
 export interface RecordCountChipPropsI {
   isCountLoading?: boolean;
   totalCount?: number;
-  recordName?: string;
+  name?: string;
   color?: string;
-  recordNameVariant?: string;
+  nameVariant?: string;
 }
 
 export interface TooltipItemsCountChipPropsI {

@@ -1,31 +1,32 @@
-const common = {
-  white: "#ffffff",
-  black: "#000000",
-  border:"#999999",
-  border_disabled:"#748EB9"
-};
-
 const primary = {
   main: "#692FC7",
   light: "#EFECFB",
-  lighter:"#A582DD"
+  lighter: "#A582DD",
 };
 
 const secondary = {
   main: "#1E293B",
 };
 
-const success = {
-  main: "#1df377",
-};
-
-const error = {
-  main: "#f9515c",
-};
-
 const text = {
   primary: "#30425F",
   secondary: "#666666",
+};
+
+const success = {
+  main: "#12B76A",
+};
+
+const error = {
+  main: "#F04438",
+};
+
+const warning = {
+  main: "#FDB022",
+};
+
+const info = {
+  main: "#2F8DC7",
 };
 
 const background = {
@@ -42,12 +43,21 @@ const action = {
   disabledBackground: "#adafca",
 };
 
+const common = {
+  white: "#ffffff",
+  black: "#000000",
+  border: "#999999",
+  border_disabled: "#748EB9",
+};
+
 export const palette = {
   common,
   primary,
   secondary,
   success,
   error,
+  warning,
+  info,
   text,
   background,
   grey,
