@@ -17,8 +17,8 @@ export const DynamicAvatar = (props: DynamicAvatarPropsI) => {
     padding,
     initialColor = "grey.800",
     nameInitialsSize = 14,
-    width = 28,
-    height = 28,
+    width = 40,
+    height = 40,
     variant = AVATAR_VARIANTS?.CIRCULAR,
   } = props;
 

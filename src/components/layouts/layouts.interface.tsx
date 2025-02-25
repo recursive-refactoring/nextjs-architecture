@@ -5,6 +5,8 @@ export interface FlexLayoutPropsI {
   justifyContent?: string;
   gap?: number;
   flexWrap?: string;
+  flexDirection?: string;
+  minHeight?: string;
   children?: ReactNode;
 }
 

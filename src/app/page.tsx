@@ -1,9 +1,9 @@
-import { HomeFeature } from "@/features/home";
+import { ComponentsFeature } from "@/features/components";
 
 export default function Home() {
   return (
     <>
-      <HomeFeature />
+      <ComponentsFeature />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { palette } from "@/theme/palette";
+import { shadows } from "@/theme/shadows";
 import { typography } from "@/theme/typography";
 import { Theme } from "@emotion/react";
 import {
@@ -15,9 +16,10 @@ export const UiThemeProvider = (props: any) => {
   const themeOptions: Theme = {
     palette,
     typography,
+    shadows,
     spacing: 10,
-    shape: { borderRadius: 4 },
   };
+
   const theme = createTheme(themeOptions);
 
   return (
@@ -25,7 +27,7 @@ export const UiThemeProvider = (props: any) => {
       <GlobalStyles
         styles={(theme) => ({
           "& ::selection": {
-            backgroundColor: theme?.palette?.secondary?.main,
+            backgroundColor: theme?.palette?.primary?.main,
             color: theme?.palette?.common?.white,
           },
         })}

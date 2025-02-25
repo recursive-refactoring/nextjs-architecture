@@ -1,0 +1,1 @@
+export { default as UISearchIcon } from "@mui/icons-material/Search";

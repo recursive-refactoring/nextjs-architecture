@@ -67,3 +67,9 @@ export const BUTTON_CATEGORIES: ButtonCategoriesI = {
   REJECT: "reject",
   PREVIEW: "preview",
 };
+
+export const SEARCH_FIELD_CATEGORY = {
+  PRIMARY: "primary",
+  SECONDARY: "secondary",
+  BASIC: "basic",
+};

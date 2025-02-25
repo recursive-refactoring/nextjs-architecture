@@ -1,14 +1,18 @@
 const common = {
   white: "#ffffff",
   black: "#000000",
+  border:"#999999",
+  border_disabled:"#748EB9"
 };
 
 const primary = {
-  main: "#615dfa",
+  main: "#692FC7",
+  light: "#EFECFB",
+  lighter:"#A582DD"
 };
 
 const secondary = {
-  main: "#23d2e2",
+  main: "#1E293B",
 };
 
 const success = {
@@ -20,7 +24,8 @@ const error = {
 };
 
 const text = {
-  primary: "#3e3f5e",
+  primary: "#30425F",
+  secondary: "#666666",
 };
 
 const background = {
@@ -31,7 +36,7 @@ const grey = {
   0: "#adafca",
 };
 
-const divider = "#eaeaf5";
+const divider = "#999999";
 
 const action = {
   disabledBackground: "#adafca",

@@ -7,6 +7,8 @@ export const FlexLayout = (props: FlexLayoutPropsI) => {
     justifyContent = "flex-start",
     gap = 1,
     flexWrap = "wrap",
+    flexDirection = "row",
+    minHeight = "auto",
     children,
   } = props;
 
@@ -18,6 +20,8 @@ export const FlexLayout = (props: FlexLayoutPropsI) => {
         justifyContent,
         gap,
         flexWrap,
+        flexDirection,
+        minHeight,
       }}
     >
       {children}
