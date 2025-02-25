@@ -1,5 +1,6 @@
 "use client";
 import { InputAdornment, TextField } from "@mui/material";
+import FieldLabel from "../field-label";
 
 export const CommonTextField = (props: any) => {
   const {
@@ -23,12 +24,19 @@ export const CommonTextField = (props: any) => {
     name,
     ref,
     id = name,
+    required = false,
+    ...other
   } = props;
-
+  console.log({ textfield: props });
   return (
     <>
+      {label && (
+        <label htmlFor={name}>
+          <FieldLabel label={label} required={required} />
+        </label>
+      )}
       <TextField
-        label={label}
+        label={""}
         variant={variant}
         size={size}
         error={error}
@@ -69,6 +77,7 @@ export const CommonTextField = (props: any) => {
           },
           "& fieldset": { border },
         }}
+        {...other}
       />
     </>
   );

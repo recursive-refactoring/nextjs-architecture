@@ -1,3 +1,5 @@
+import { SingleAutocompleteSyncFormField } from "@/components/form-fields/autocomplete-form-fields";
+import SingleCheckboxFormField from "@/components/form-fields/single-checkbox-form-field";
 import TextAreaFormFields from "@/components/form-fields/text-area-form-field";
 import TextFormFields from "@/components/form-fields/text-form-field";
 
@@ -74,6 +76,8 @@ export const signinFormDefaultValues = {
   email: "",
   password: "",
   message: "",
+  remember: false,
+  syncAutocomplete: null,
 };
 
 export const signinFormFieldData = [
@@ -101,5 +105,25 @@ export const signinFormFieldData = [
       label: "Message",
     },
     component: TextAreaFormFields,
+  },
+  {
+    _id: 4,
+    componentProps: {
+      name: "remember",
+      label: " Remember Me",
+    },
+    component: SingleCheckboxFormField,
+  },
+  {
+    _id: 5,
+    componentProps: {
+      name: "syncAutocomplete",
+      label: "Remember Me",
+      options: [
+        { _id: 1, label: 1 },
+        { _id: 2, label: 2 },
+      ],
+    },
+    component: SingleAutocompleteSyncFormField,
   },
 ];

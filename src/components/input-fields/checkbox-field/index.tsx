@@ -1,26 +1,40 @@
-import { Box, Checkbox, Typography } from "@mui/material";
-import { CheckboxFieldPropsI } from "../InputFields.interface";
+import { Checkbox, FormControlLabel } from "@mui/material";
+import { CheckboxFieldPropsI } from "../input-fields.interface";
+import FieldLabel from "../field-label";
 
 export const CheckboxField = (props: CheckboxFieldPropsI) => {
-  const { checked, onChange, label, name = label, id = "" } = props;
+  const {
+    checked,
+    onChange,
+    label,
+    name = label,
+    id = name,
+    ariaLabel = label,
+    disabled = false,
+  } = props;
+
   return (
-    <Box display={"flex"} alignItems={"center"} gap={1} flexWrap={"wrap"}>
-      <Checkbox
-        color={"primary"}
-        name={name}
-        checked={checked}
-        onChange={onChange}
-        id={id}
-      />
-      {!!label && (
-        <Typography
-          variant={"caption"}
-          fontWeight={400}
-          color={"slateBlue.main"}
-        >
-          {label}
-        </Typography>
-      )}
-    </Box>
+    <FormControlLabel
+      control={
+        <Checkbox
+          color={"primary"}
+          name={name}
+          checked={checked}
+          onChange={onChange}
+          id={id}
+          disabled={disabled}
+          inputProps={{
+            "aria-label": ariaLabel,
+          }}
+        />
+      }
+      label={
+        !!label && (
+          <label htmlFor={name}>
+            <FieldLabel label={label} marginBottom={0} />
+          </label>
+        )
+      }
+    />
   );
 };

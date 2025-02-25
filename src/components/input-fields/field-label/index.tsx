@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
+import { FieldLabelPropsI } from "../input-fields.interface";
 
-const FieldLabel = (props: any) => {
+const FieldLabel = (props: FieldLabelPropsI) => {
   const { label, required = false, marginBottom = 0.6 } = props;
 
   return (

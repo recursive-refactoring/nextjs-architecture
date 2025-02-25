@@ -17,20 +17,17 @@ const TextFormFields = (props: any) => {
         console.log(field);
         return (
           <>
-            {label && (
-              <label htmlFor={name}>
-                <FieldLabel label={label} required={required} />
-              </label>
-            )}
             <CommonTextFields
               {...field}
               id={name}
+              label={label}
               value={field?.value || ""}
               onChange={field?.onChange}
               onBlur={() => {
                 onBlurHandler?.();
                 field?.onBlur?.();
               }}
+              required={required}
               error={!!error}
               startIcon={other?.startIcon}
               endIcon={other?.endIcon}

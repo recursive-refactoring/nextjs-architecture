@@ -1,5 +1,6 @@
 "use client";
-import { InputAdornment, TextField, Typography } from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
+import FieldLabel from "../field-label";
 
 const CommonTextAreaField = (props: any) => {
   const {
@@ -24,12 +25,18 @@ const CommonTextAreaField = (props: any) => {
     ref,
     id = name,
     rows = 3,
+    required = false,
   } = props;
 
   return (
     <>
+      {label && (
+        <label htmlFor={name}>
+          <FieldLabel label={label} required={required} />
+        </label>
+      )}
       <TextField
-        label={label}
+        label={""}
         variant={variant}
         size={size}
         error={error}
