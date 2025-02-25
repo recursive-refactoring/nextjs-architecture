@@ -1,4 +1,7 @@
-import { SingleAutocompleteSyncFormField } from "@/components/form-fields/autocomplete-form-fields";
+import {
+  MultipleAutocompleteSyncFormField,
+  SingleAutocompleteSyncFormField,
+} from "@/components/form-fields/autocomplete-form-fields";
 import SingleCheckboxFormField from "@/components/form-fields/single-checkbox-form-field";
 import TextAreaFormFields from "@/components/form-fields/text-area-form-field";
 import TextFormFields from "@/components/form-fields/text-form-field";
@@ -78,6 +81,7 @@ export const signinFormDefaultValues = {
   message: "",
   remember: false,
   syncAutocomplete: null,
+  syncMultipleAutocomplete: [],
 };
 
 export const signinFormFieldData = [
@@ -120,10 +124,22 @@ export const signinFormFieldData = [
       name: "syncAutocomplete",
       label: "Remember Me",
       options: [
-        { _id: 1, label: 1 },
-        { _id: 2, label: 2 },
+        { _id: 1, label: "1" },
+        { _id: 2, label: "po" },
       ],
     },
     component: SingleAutocompleteSyncFormField,
+  },
+  {
+    _id: 6,
+    componentProps: {
+      name: "syncMultipleAutocomplete",
+      label: "sync Multiple",
+      options: [
+        { _id: 1, label: "1" },
+        { _id: 2, label: "po" },
+      ],
+    },
+    component: MultipleAutocompleteSyncFormField,
   },
 ];

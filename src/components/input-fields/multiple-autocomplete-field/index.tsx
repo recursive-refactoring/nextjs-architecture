@@ -2,7 +2,7 @@ import { Autocomplete, TextField } from "@mui/material";
 import FieldLabel from "../field-label";
 import { BodyText } from "@/components/text/body-text";
 
-export const SingleAutocompleteField = (props: any) => {
+export const MultipleAutocompleteField = (props: any) => {
   const {
     options = [],
     name,
@@ -20,6 +20,7 @@ export const SingleAutocompleteField = (props: any) => {
     required = false,
     errorMessage = "",
     size = "small",
+    limitTags = 3,
     ...others
   } = props;
 
@@ -27,12 +28,14 @@ export const SingleAutocompleteField = (props: any) => {
     <Autocomplete
       options={options}
       name={name}
-      value={value ?? null}
+      value={value ?? []}
       onChange={onChange}
       onBlur={onBlur}
       autoComplete
       noOptionsText={noOptionsText}
       groupBy={groupBy}
+      multiple
+      limitTags={limitTags}
       getOptionLabel={getOptionLabel}
       isOptionEqualToValue={isOptionEqualToValue}
       {...others}
@@ -58,4 +61,4 @@ export const SingleAutocompleteField = (props: any) => {
   );
 };
 
-export default SingleAutocompleteField;
+export default MultipleAutocompleteField;
