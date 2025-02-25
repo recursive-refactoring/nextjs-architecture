@@ -8,4 +8,5 @@ export interface ActivityInfoCardPropsI {
   name: string;
   info: string;
   infoColor?: string;
+  extraInfo?: string;
 }
