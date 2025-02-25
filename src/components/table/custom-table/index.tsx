@@ -40,7 +40,7 @@ const CustomTable = (props: CustomTablePropsI) => {
           {table
             ?.getRowModel()
             ?.rows?.map((row: any) => (
-              <TableRow id={row?.id}>
+              <TableRow key={row?.id}>
                 {row
                   ?.getVisibleCells()
                   ?.map((cell: any) => (
