@@ -1,9 +1,9 @@
 import { styles } from "./horizontal-tabs.style";
 import { Box, Tab, Tabs } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
-import { PermissionTabsPropsI } from "../tabs.interface";
+import { HorizontalTabsPropsI } from "../tabs.interface";
 
-export const HorizontalTabs = (props: PermissionTabsPropsI) => {
+export const HorizontalTabs = (props: HorizontalTabsPropsI) => {
   const {
     tabsDataArray = [],
     variant = "scrollable",
