@@ -11,17 +11,31 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
     isCountLoading = false,
     totalCount = 0,
     name,
-    color = "common.white",
+    textColor = "text.primary",
+    chipColor = "primary",
+    chipBackgroundColor = "primary.main",
     nameVariant = "h6",
+    isRight = true,
   } = props;
 
   return (
-    <Box display={"flex"} alignItems={"center"} gap={1} flexWrap={"wrap"}>
+    <Box
+      display={"flex"}
+      alignItems={"center"}
+      justifyContent={"space-between"}
+      gap={1}
+      flexWrap={"wrap"}
+    >
+      {isRight && (
+        <Typography variant={nameVariant as Variant} color={textColor}>
+          {name}
+        </Typography>
+      )}
       <CustomCommonChip
         size="medium"
         shape={CHIP_SHAPE?.SQUARE}
-        color="secondary"
-        backgroundColor={color}
+        color={chipColor}
+        backgroundColor={chipBackgroundColor}
         label={
           isCountLoading ? (
             <Box
@@ -40,9 +54,11 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
           )
         }
       />
-      <Typography variant={nameVariant as Variant} color={color}>
-        {name}
-      </Typography>
+      {!isRight && (
+        <Typography variant={nameVariant as Variant} color={textColor}>
+          {name}
+        </Typography>
+      )}
     </Box>
   );
 };

@@ -1,17 +1,18 @@
 import { ChipProps } from "@mui/material";
 import { ReactElement } from "react";
 
+export type ChipColorType =
+  | "primary"
+  | "secondary"
+  | "error"
+  | "info"
+  | "success"
+  | "warning"
+  | "default";
 export interface CustomCommonChipPropsI extends ChipProps {
   size?: "small" | "medium";
   label: string | any;
-  color?:
-    | "primary"
-    | "secondary"
-    | "error"
-    | "info"
-    | "success"
-    | "warning"
-    | "default";
+  color?: ChipColorType;
   variant?: "filled" | "outlined";
   disabled?: boolean;
   customStyles?: Record<string, any>;
@@ -32,8 +33,11 @@ export interface RecordCountChipPropsI {
   isCountLoading?: boolean;
   totalCount?: number;
   name?: string;
-  color?: string;
   nameVariant?: string;
+  textColor?: string;
+  chipColor?: ChipColorType;
+  chipBackgroundColor?: string;
+  isRight?: boolean;
 }
 
 export interface TooltipItemsCountChipPropsI {

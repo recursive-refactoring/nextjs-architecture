@@ -6,6 +6,7 @@ import { FormGrid } from "@/components/grids/form-grid";
 import { signinFormFieldData } from "./components.data";
 import { Box } from "@mui/material";
 import ItemAvatarCountCard from "@/components/cards/item-avatar-count-card";
+import { CommonLayoutAvatarImage } from "@/assets/images/common/layout";
 import ActivityInfoCard from "@/components/cards/activity-info-card";
 
 export const ComponentsFeature = () => {
@@ -28,7 +29,11 @@ export const ComponentsFeature = () => {
         </CustomFormProvider>
 
         <Box>
-          <ItemAvatarCountCard name="Hi" avatarSrc={""} count={3} />
+          <ItemAvatarCountCard
+            name="Hi"
+            avatarSrc={CommonLayoutAvatarImage}
+            count={3}
+          />
         </Box>
         <Box>
           <ActivityInfoCard name="Hi" info={"40 hrs"} />
