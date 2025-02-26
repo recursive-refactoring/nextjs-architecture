@@ -2,8 +2,9 @@ import { FlexLayout } from "@/components/layouts/flex-layout";
 import { PAGINATION } from "@/configs/pagination";
 import { Pagination, TablePagination } from "@mui/material";
 import { useCallback } from "react";
+import { CommonPaginationPropsI } from "../navigation.interface";
 
-const CommonPagination = (props: any) => {
+const CommonPagination = (props: CommonPaginationPropsI) => {
   const {
     count = PAGINATION?.PAGE_COUNT,
     rowsPerPageOptions = PAGINATION?.ROWS_PER_PAGE_OPTIONS,

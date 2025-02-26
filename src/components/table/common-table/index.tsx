@@ -15,12 +15,20 @@ import { pxToRem } from "@/utils/styles";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import CommonPagination from "@/components/navigation/common-pagination";
+import { PAGINATION } from "@/configs/pagination";
 
 const CommonTable = (props: CommonTablePropsI) => {
   const {
     ariaLabelTable = "main-table",
     minWidth = 1000,
     stickyHeader = false,
+    count = PAGINATION?.PAGE_COUNT,
+    rowsPerPageOptions = PAGINATION?.ROWS_PER_PAGE_OPTIONS,
+    pageLimit = PAGINATION?.PAGE_LIMIT,
+    currentPage = PAGINATION?.CURRENT_PAGE,
+    totalRecords = PAGINATION?.TOTAL_RECORDS,
+    setPage,
+    setPageLimit,
   } = props;
 
   const { table } = useCommonTable(props);
@@ -123,7 +131,15 @@ const CommonTable = (props: CommonTablePropsI) => {
           </TableBody>
         </Table>
       </TableContainer>
-      <CommonPagination />
+      <CommonPagination
+        count={count}
+        pageLimit={pageLimit}
+        currentPage={currentPage}
+        totalRecords={totalRecords}
+        rowsPerPageOptions={rowsPerPageOptions}
+        setPage={setPage}
+        setPageLimit={setPageLimit}
+      />
     </Box>
   );
 };
