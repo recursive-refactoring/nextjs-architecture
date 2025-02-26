@@ -29,6 +29,7 @@ const CommonTable = (props: CommonTablePropsI) => {
     totalRecords = PAGINATION?.TOTAL_RECORDS,
     setPage,
     setPageLimit,
+    hasPagination = true,
   } = props;
 
   const { table } = useCommonTable(props);
@@ -131,15 +132,19 @@ const CommonTable = (props: CommonTablePropsI) => {
           </TableBody>
         </Table>
       </TableContainer>
-      <CommonPagination
-        count={count}
-        pageLimit={pageLimit}
-        currentPage={currentPage}
-        totalRecords={totalRecords}
-        rowsPerPageOptions={rowsPerPageOptions}
-        setPage={setPage}
-        setPageLimit={setPageLimit}
-      />
+      {hasPagination && (
+        <Box>
+          <CommonPagination
+            count={count}
+            pageLimit={pageLimit}
+            currentPage={currentPage}
+            totalRecords={totalRecords}
+            rowsPerPageOptions={rowsPerPageOptions}
+            setPage={setPage}
+            setPageLimit={setPageLimit}
+          />
+        </Box>
+      )}
     </Box>
   );
 };

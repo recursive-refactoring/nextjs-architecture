@@ -11,4 +11,5 @@ export interface CommonTablePropsI {
   rowsPerPageOptions?: number[];
   setPage?: any;
   setPageLimit?: any;
+  hasPagination?: boolean;
 }
