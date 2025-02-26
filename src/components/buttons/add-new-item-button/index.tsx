@@ -12,7 +12,6 @@ export const AddNewItemButton = (props: AddNewItemButtonPropsI) => {
   const {
     disabled = false,
     variant = "contained",
-    name,
     color = "primary",
     onClick,
     hasStartIcon = true,

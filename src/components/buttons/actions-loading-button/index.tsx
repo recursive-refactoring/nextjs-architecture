@@ -1,7 +1,7 @@
 "use client";
 
 import { Box } from "@mui/material";
-import { CustomLoadingButton } from "../custom-loading-button";
+import { CommonLoadingButton } from "../common-loading-button";
 import { ActionsLoadingButtonPropsI } from "../buttons.interface";
 
 export const ActionsLoadingButton = (props: ActionsLoadingButtonPropsI) => {
@@ -30,22 +30,22 @@ export const ActionsLoadingButton = (props: ActionsLoadingButtonPropsI) => {
         borderColor: "custom.off_white_three",
       }}
     >
-      <CustomLoadingButton
+      <CommonLoadingButton
         primary={false}
         onClick={handleCancelButton}
         disabled={disabledCancelButton}
       >
         {cancelButtonText}
-      </CustomLoadingButton>
+      </CommonLoadingButton>
 
-      <CustomLoadingButton
+      <CommonLoadingButton
         type="submit"
         loading={showSubmitLoader}
         disabled={disabledSubmitButton}
         onClick={handleSubmitButton}
       >
         {submitButtonText}
-      </CustomLoadingButton>
+      </CommonLoadingButton>
     </Box>
   );
 };

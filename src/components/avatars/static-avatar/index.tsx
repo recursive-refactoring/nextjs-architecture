@@ -1,5 +1,5 @@
 import { AVATAR_VARIANTS } from "@/constants/ui";
-import { StaticAvatarPropsI } from "../Avatars.interface";
+import { StaticAvatarPropsI } from "../avatars.interface";
 import Image from "next/image";
 import { pxToRem } from "@/utils/styles";
 import { STATIC_BLUR_DATA_URL } from "@/constants/avatars";
@@ -15,6 +15,7 @@ export const StaticAvatar = (props: StaticAvatarPropsI) => {
     variant = AVATAR_VARIANTS?.CIRCULAR,
     aspectRatio = "1",
     sizes = "100vw",
+    isCenter = false,
   } = props;
 
   const borderRadius = AVATAR_VARIANTS_BORDER_RADIUS?.[variant];
@@ -29,6 +30,7 @@ export const StaticAvatar = (props: StaticAvatarPropsI) => {
         backgroundColor,
         borderRadius,
         overflow: "hidden",
+        margin: isCenter ? "auto" : "",
       }}
     >
       <Image

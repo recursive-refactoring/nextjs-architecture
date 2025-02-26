@@ -26,7 +26,7 @@ const SingleAutocompleteSyncFormField = (props: any) => {
     onChangeHandler?.(e, newValue, onChange);
     onChange(newValue);
   };
-  console.log({ props });
+
   return (
     <Controller
       name={name}

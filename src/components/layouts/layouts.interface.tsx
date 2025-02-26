@@ -7,6 +7,7 @@ export interface FlexLayoutPropsI {
   flexWrap?: string;
   flexDirection?: string;
   minHeight?: string;
+  mb?: number;
   children?: ReactNode;
 }
 

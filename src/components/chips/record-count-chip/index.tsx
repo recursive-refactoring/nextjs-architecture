@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { RecordCountChipPropsI } from "../chips.interface";
-import { CustomCommonChip } from "../custom-common-chip";
+import { CommonChip } from "../common-chip";
 import { CHIP_SHAPE } from "@/constants/ui";
 import { SELECTED_ARRAY_LENGTH } from "@/constants/array";
 import { Variant } from "@mui/material/styles/createTypography";
-import { CustomCommonCircularProgress } from "@/components/progress-bars/custom-common-circular-progress";
+import { CommonCircularProgress } from "@/components/progress-bars/common-circular-progress";
 
 export const RecordCountChip = (props: RecordCountChipPropsI) => {
   const {
@@ -31,7 +31,7 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
           {name}
         </Typography>
       )}
-      <CustomCommonChip
+      <CommonChip
         size="medium"
         shape={CHIP_SHAPE?.SQUARE}
         color={chipColor}
@@ -45,7 +45,7 @@ export const RecordCountChip = (props: RecordCountChipPropsI) => {
                 alignItems: "center",
               }}
             >
-              <CustomCommonCircularProgress />
+              <CommonCircularProgress />
             </Box>
           ) : totalCount < SELECTED_ARRAY_LENGTH?.TEN ? (
             `0${totalCount}`

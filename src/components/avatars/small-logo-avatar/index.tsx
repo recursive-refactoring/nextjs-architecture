@@ -1,5 +1,5 @@
 import { Avatar, Box } from "@mui/material";
-import { SmallLogoAvatarPropsI } from "../Avatars.interface";
+import { SmallLogoAvatarPropsI } from "../avatars.interface";
 import { PROJECT_NAME } from "@/configs/env";
 
 export const SmallLogoAvatar = (props: SmallLogoAvatarPropsI) => {

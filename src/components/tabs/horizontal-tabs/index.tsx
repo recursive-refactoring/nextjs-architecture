@@ -1,3 +1,5 @@
+"use client"
+
 import { styles } from "./horizontal-tabs.style";
 import { Box, Tab, Tabs } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";

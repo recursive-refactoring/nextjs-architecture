@@ -1,5 +1,7 @@
 "use client";
 
+import { FlexLayout } from "@/components/layouts/flex-layout";
+
 export const CommonIcon = (props: any) => {
   const {
     Icon = null,
@@ -8,21 +10,26 @@ export const CommonIcon = (props: any) => {
     hoverStyles,
     handleAction,
     fontSize,
+    color,
   } = props;
 
   if (!Icon) return;
 
   return (
-    <Icon
-      fontSize={fontSize}
-      onClick={handleAction}
-      sx={{
-        cursor: hasAction ? "pointer" : "",
-        ...customStyles,
-        "&:hover": {
-          ...hoverStyles,
-        },
-      }}
-    />
+    <FlexLayout justifyContent="center">
+      <Icon
+        fontSize={fontSize}
+        onClick={handleAction}
+        sx={{
+          cursor: hasAction ? "pointer" : "",
+          color,
+          ...customStyles,
+          "&:hover": {
+            color,
+            ...hoverStyles,
+          },
+        }}
+      />
+    </FlexLayout>
   );
 };

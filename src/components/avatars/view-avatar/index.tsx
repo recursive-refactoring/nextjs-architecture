@@ -1,9 +1,9 @@
 import { Avatar } from "@mui/material";
-import { ViewAvatarPropsI } from "../Avatars.interface";
+import { ViewAvatarPropsI } from "../avatars.interface";
 import { ATTACHMENT_FILE_TYPE } from "@/constants/file";
 import { generateImage } from "@/utils/avatars";
 import { AVATAR_VARIANTS } from "@/constants/ui";
-import { CustomCommonDialog } from "@/components/dialogs/custom-common-dialog";
+import { CommonDialog } from "@/components/dialogs/common-dialog";
 
 const ViewAvatar = (props: ViewAvatarPropsI) => {
   const { isPortalOpen, setIsPortalOpen, avatarSrc, title, fileType } = props;
@@ -12,7 +12,7 @@ const ViewAvatar = (props: ViewAvatarPropsI) => {
 
   if (fileType === ATTACHMENT_FILE_TYPE?.PDF)
     return (
-      <CustomCommonDialog
+      <CommonDialog
         isPortalOpen={isPortalOpen}
         closePortal={closeModal}
         dialogTitle={title}
@@ -20,11 +20,11 @@ const ViewAvatar = (props: ViewAvatarPropsI) => {
         dialogMaxWidth="md"
       >
         <iframe src={generateImage(avatarSrc)} width="100%" height="600" />
-      </CustomCommonDialog>
+      </CommonDialog>
     );
 
   return (
-    <CustomCommonDialog
+    <CommonDialog
       isPortalOpen={isPortalOpen}
       closePortal={closeModal}
       dialogTitle={title}
@@ -39,7 +39,7 @@ const ViewAvatar = (props: ViewAvatarPropsI) => {
         variant={AVATAR_VARIANTS?.SQUARE}
         alt={title}
       />
-    </CustomCommonDialog>
+    </CommonDialog>
   );
 };
 

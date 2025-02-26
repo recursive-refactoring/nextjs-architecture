@@ -1,11 +1,11 @@
 import { Box, Chip, Typography } from "@mui/material";
 import { TooltipItemsCountChipPropsI } from "../chips.interface";
-import { CustomCommonTooltip } from "@/components/data-displays/custom-common-tooltip";
+import { CommonTooltip } from "@/components/data-displays/common-tooltip";
 
 export const TooltipItemsCountChip = (props: TooltipItemsCountChipPropsI) => {
   const { data = [] } = props;
   return (
-    <CustomCommonTooltip
+    <CommonTooltip
       title={
         !!data?.length && (
           <Box maxHeight={"10vh"} overflow={"auto"}>
@@ -24,6 +24,6 @@ export const TooltipItemsCountChip = (props: TooltipItemsCountChipPropsI) => {
         variant="filled"
         color={"primary"}
       />
-    </CustomCommonTooltip>
+    </CommonTooltip>
   );
 };

@@ -40,7 +40,8 @@ const grey = {
 const divider = "#999999";
 
 const action = {
-  disabledBackground: "#adafca",
+  disabledBackground: "#CCCCCC",
+  disabled: "#CCCCCC",
 };
 
 const common = {

@@ -1,6 +1,6 @@
 import { Autocomplete, TextField } from "@mui/material";
 import FieldLabel from "../field-label";
-import { BodyText } from "@/components/text/body-text";
+import { ErrorMessageField } from "../error-message-field";
 
 export const MultipleAutocompleteField = (props: any) => {
   const {
@@ -52,7 +52,9 @@ export const MultipleAutocompleteField = (props: any) => {
             label={""}
             error={!!error}
             placeholder={placeholder}
-            helperText={<BodyText component="span">{errorMessage}</BodyText>}
+            helperText={
+              !!error && <ErrorMessageField>{error?.message}</ErrorMessageField>
+            }
             size={size}
           />
         </>

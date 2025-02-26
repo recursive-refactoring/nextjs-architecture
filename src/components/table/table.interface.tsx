@@ -1,4 +1,4 @@
-export interface CustomTablePropsI {
+export interface CommonTablePropsI {
   columns: any[];
   data: any[];
   ariaLabelTable?: string;

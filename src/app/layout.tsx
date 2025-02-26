@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { UiThemeProvider } from "@/providers/ui-theme-provider";
+import { SnackBarProvider } from "@/providers/snackbar.provider";
 
 const dmSans = DM_Sans({
-  variable: "--font-dm-sans", // Custom CSS variable
   subsets: ["latin"],
+  weight: ["100", "400", "500", "600", "700", "800", "900"],
+  display: 'swap',
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${dmSans.variable}`}>
-        <UiThemeProvider>{children}</UiThemeProvider>
+      <body className={`${dmSans.className}`}>
+        <UiThemeProvider>
+          <SnackBarProvider>{children}</SnackBarProvider>
+        </UiThemeProvider>
       </body>
     </html>
   );

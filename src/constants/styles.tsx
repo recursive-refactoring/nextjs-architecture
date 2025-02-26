@@ -14,8 +14,9 @@ export const SEARCH_FIELD_CATEGORY_STYLES = {
     iconColor: "common.white",
     borderColor: "common.border_disabled",
     color: "common.white",
-    border:"1px solid",
+    border: "none",
   },
+
   [SEARCH_FIELD_CATEGORY?.BASIC]: {
     backgroundColor: "transparent",
     iconColor: "common.disabled",

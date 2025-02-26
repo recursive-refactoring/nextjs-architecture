@@ -1,8 +1,7 @@
 "use client";
 import { Controller, useFormContext } from "react-hook-form";
 import CommonTextFields from "@/components/input-fields/common-text-field";
-import { BodyText } from "@/components/text/body-text";
-import FieldLabel from "@/components/input-fields/field-label";
+import { ErrorMessageField } from "@/components/input-fields/error-message-field";
 
 const TextFormFields = (props: any) => {
   const { name, onBlurHandler, required = false, label, ...other } = props;
@@ -14,7 +13,6 @@ const TextFormFields = (props: any) => {
       name={name}
       control={control}
       render={({ field, fieldState: { error } }) => {
-        console.log(field);
         return (
           <>
             <CommonTextFields
@@ -32,7 +30,9 @@ const TextFormFields = (props: any) => {
               startIcon={other?.startIcon}
               endIcon={other?.endIcon}
               helperText={
-                <BodyText component="span">{error?.message}</BodyText>
+                !!error && (
+                  <ErrorMessageField>{error?.message}</ErrorMessageField>
+                )
               }
               {...other}
             />

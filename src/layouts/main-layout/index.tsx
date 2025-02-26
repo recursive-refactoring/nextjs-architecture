@@ -2,10 +2,11 @@ import { FlexLayout } from "@/components/layouts/flex-layout";
 import Header from "./header";
 import { Box } from "@mui/material";
 import MenuBar from "./menu-bar";
+import { PageHeader } from "./page-header";
 
 export const MainLayout = (props: any) => {
   const { children } = props;
-  
+
   return (
     <FlexLayout
       flexDirection="column"
@@ -31,6 +32,9 @@ export const MainLayout = (props: any) => {
           paddingTop: 3,
         }}
       >
+        <Box sx={{ marginBottom: 2 }}>
+          <PageHeader />
+        </Box>
         {children}
       </Box>
     </FlexLayout>

@@ -9,6 +9,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   createTheme,
+  responsiveFontSizes,
 } from "@mui/material";
 
 export const UiThemeProvider = (props: any) => {
@@ -20,7 +21,8 @@ export const UiThemeProvider = (props: any) => {
     spacing: 10,
   };
 
-  const theme = createTheme(themeOptions);
+  let theme = createTheme(themeOptions);
+  theme = responsiveFontSizes(theme);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,5 +1,5 @@
 import { Avatar } from "@mui/material";
-import { IconAvatarPropsI } from "../Avatars.interface";
+import { IconAvatarPropsI } from "../avatars.interface";
 import { AVATAR_VARIANTS } from "@/constants/ui";
 
 export const IconAvatar = (props: IconAvatarPropsI) => {

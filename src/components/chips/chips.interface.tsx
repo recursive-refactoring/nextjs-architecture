@@ -9,7 +9,8 @@ export type ChipColorType =
   | "success"
   | "warning"
   | "default";
-export interface CustomCommonChipPropsI extends ChipProps {
+  
+export interface CommonChipPropsI extends ChipProps {
   size?: "small" | "medium";
   label: string | any;
   color?: ChipColorType;

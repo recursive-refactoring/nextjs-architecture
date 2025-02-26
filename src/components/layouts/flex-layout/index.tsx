@@ -9,6 +9,7 @@ export const FlexLayout = (props: FlexLayoutPropsI) => {
     flexWrap = "wrap",
     flexDirection = "row",
     minHeight = "auto",
+    mb = 0,
     children,
   } = props;
 
@@ -22,6 +23,7 @@ export const FlexLayout = (props: FlexLayoutPropsI) => {
         flexWrap,
         flexDirection,
         minHeight,
+        mb,
       }}
     >
       {children}

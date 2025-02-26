@@ -51,7 +51,7 @@ export interface ApiPollingButtonPropsI {
   buttonLabel?: string;
 }
 
-export interface CustomCommonButtonPropsI {
+export interface CommonButtonPropsI {
   children: ReactNode;
   onClick?: () => void;
   variant?: ButtonVariantType;
@@ -66,7 +66,7 @@ export interface CustomCommonButtonPropsI {
   primary?: boolean;
 }
 
-export interface CustomIconButtonPropsI {
+export interface CommonIconButtonPropsI {
   onClick: any;
   color?: ButtonColorType;
   customStyles?: any;
@@ -79,7 +79,7 @@ export interface CustomIconButtonPropsI {
   iconName?: string;
 }
 
-export interface CustomLoadingButtonPropsI {
+export interface CommonLoadingButtonPropsI {
   onClick?: (...arg: any) => void;
   children: ReactNode;
   color?: ButtonColorType;

@@ -27,7 +27,7 @@ export const CommonTextField = (props: any) => {
     required = false,
     ...other
   } = props;
-  console.log({ textfield: props });
+  
   return (
     <>
       {label && (
@@ -59,6 +59,7 @@ export const CommonTextField = (props: any) => {
             ) : undefined,
           },
         }}
+        {...other}
         sx={{
           backgroundColor,
           borderRadius,
@@ -77,7 +78,6 @@ export const CommonTextField = (props: any) => {
           },
           "& fieldset": { border },
         }}
-        {...other}
       />
     </>
   );

@@ -12,12 +12,12 @@ export const adminMenuItemsData = [
   {
     _id: 3,
     link: "#",
-    name: "LARS",
+    name: "Lots",
   },
   {
     _id: 4,
     link: "#",
-    name: "Azure Services",
+    name: "Services",
   },
   {
     _id: 5,
@@ -25,18 +25,8 @@ export const adminMenuItemsData = [
     name: "User Management",
   },
   {
-    _id: 6,
-    link: "#",
-    name: "Audit Log",
-  },
-  {
     _id: 7,
     link: "#",
     name: "Change Log",
-  },
-  {
-    _id: 8,
-    link: "#",
-    name: "Access Requests",
   },
 ];

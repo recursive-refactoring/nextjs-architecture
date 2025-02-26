@@ -1,18 +1,22 @@
 import { Avatar, Box, Typography } from "@mui/material";
-import { LogoAvatarPropsI } from "../Avatars.interface";
+import { LogoAvatarPropsI } from "../avatars.interface";
 import { PROJECT_NAME } from "@/configs/env";
 import { AVATAR_VARIANTS } from "@/constants/ui";
+import {
+  CommonDarkLogoImage,
+  CommonWhiteLogoImage,
+} from "@/assets/images/logo";
 
 export const LogoAvatar = (props: LogoAvatarPropsI) => {
   const {
     productName,
-    isWhite = false,
+    isWhite = true,
     width = "100%",
-    height = 38,
+    height = 28,
     variant = AVATAR_VARIANTS?.SQUARE,
   } = props;
 
-  const Logo = isWhite ? "" : "";
+  const Logo = isWhite ? CommonWhiteLogoImage?.src : CommonDarkLogoImage?.src;
 
   return (
     <Box>
