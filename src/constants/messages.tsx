@@ -6,5 +6,5 @@ export const API_MESSAGES = {
 };
 
 export const UI_MESSAGES = {
-  NO_DATA_FOUND: "No data found",
+  NO_PAGE_FOUND: "No page found",
 };
