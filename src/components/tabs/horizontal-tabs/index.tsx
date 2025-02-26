@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { styles } from "./horizontal-tabs.style";
 import { Box, Tab, Tabs } from "@mui/material";
@@ -18,7 +18,7 @@ export const HorizontalTabs = (props: HorizontalTabsPropsI) => {
 
   useEffect(() => {
     if (value !== defaultValue) setValue(defaultValue);
-  }, [defaultValue]);
+  }, [defaultValue, value]);
 
   const handleChange = useCallback(
     (_: React.SyntheticEvent, newValue: number) => {

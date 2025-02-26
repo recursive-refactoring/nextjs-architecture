@@ -50,7 +50,7 @@ export const SingleAutocompleteField = (props: any) => {
             error={!!error}
             placeholder={placeholder}
             helperText={
-              !!error && <ErrorMessageField>{error?.message}</ErrorMessageField>
+              !!error && <ErrorMessageField>{errorMessage}</ErrorMessageField>
             }
             size={size}
           />

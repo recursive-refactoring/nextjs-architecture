@@ -1,6 +1,5 @@
 "use client";
 import { Controller, useFormContext } from "react-hook-form";
-import { BodyText } from "@/components/text/body-text";
 import CommonTextAreaField from "@/components/input-fields/common-text-area=field";
 import { ErrorMessageField } from "@/components/input-fields/error-message-field";
 
@@ -29,6 +28,7 @@ const TextAreaFormFields = (props: any) => {
               error={!!error}
               startIcon={other?.startIcon}
               endIcon={other?.endIcon}
+              required={required}
               helperText={
                 !!error && (
                   <ErrorMessageField>{error?.message}</ErrorMessageField>

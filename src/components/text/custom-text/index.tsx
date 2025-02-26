@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { BodyTextPropsI, CustomTextPropsI } from "../text.interface";
+import { CustomTextPropsI } from "../text.interface";
 
 export const CustomText = (props: CustomTextPropsI) => {
   const {

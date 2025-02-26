@@ -1,6 +1,4 @@
-import CommonTextField from "@/components/input-fields/common-text-field";
 import SingleAutocompleteField from "@/components/input-fields/single-autocomplete-field";
-import { BodyText } from "@/components/text/body-text";
 import { Controller, useFormContext } from "react-hook-form";
 
 const SingleAutocompleteSyncFormField = (props: any) => {
@@ -43,6 +41,7 @@ const SingleAutocompleteSyncFormField = (props: any) => {
             options={options ?? []}
             noOptionsText={noOptionsText}
             groupBy={groupBy}
+            freeSolo={freeSolo}
             getOptionLabel={getOptionLabel}
             isOptionEqualToValue={isOptionEqualToValue}
             id={name}
@@ -51,6 +50,7 @@ const SingleAutocompleteSyncFormField = (props: any) => {
             placeholder={placeholder}
             required={required}
             errorMessage={error?.message}
+            endAdornment={endAdornment}
           />
         );
       }}

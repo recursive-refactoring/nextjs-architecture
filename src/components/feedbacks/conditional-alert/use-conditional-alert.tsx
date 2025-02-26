@@ -23,7 +23,7 @@ export const useConditionalAlert = (props: ConditionalAlertPropsI) => {
     if (condition) {
       showAlert();
     }
-  }, [condition, message]);
+  }, [condition, message, showAlert]);
 
   return { alert };
 };

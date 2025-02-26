@@ -21,7 +21,7 @@ export const SearchField = (props: any) => {
   };
   const styles = useMemo(
     () => SEARCH_FIELD_CATEGORY_STYLES?.[searchVariant] ?? {},
-    [],
+    [searchVariant],
   );
 
   return (

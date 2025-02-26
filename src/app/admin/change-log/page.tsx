@@ -1,7 +1,7 @@
 import ChangeLogsFeature from "@/features/logs/change-logs";
 
-export const ChangeLogPage = () => {
+export default function ChangeLogPage() {
   return <ChangeLogsFeature />;
-};
+}
 
-export default ChangeLogPage;
+// export default ChangeLogPage;
