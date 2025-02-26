@@ -15,9 +15,9 @@ export const SnackBarProvider = (props: any) => {
         newestOnTop={false}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
+        pauseOnFocusLoss={false}
         draggable
-        pauseOnHover
+        pauseOnHover={false}
         theme="light"
         limit={1}
       />

@@ -13,10 +13,19 @@ import { CommonDrawer } from "@/components/dialogs/common-drawer";
 import CommonTable from "@/components/table/common-table";
 import { AlertDialog } from "@/components/dialogs/alert-dialog";
 import { ALERT_DIALOGS_TYPES } from "@/constants/alert-dialog";
+import { CommonButton } from "@/components/buttons/common-button";
+import {
+  errorSnackbar,
+  infoSnackbar,
+  successSnackbar,
+  warningSnackbar,
+} from "@/libs/snackbar.lib";
 
 export const ComponentsFeature = () => {
   const { column, renderData, methods } = useComponents();
-
+  const showSnackbar = () => {
+    infoSnackbar("this is success");
+  };
   return (
     <>
       <CommonTable columns={column} data={renderData} />
@@ -32,7 +41,7 @@ export const ComponentsFeature = () => {
         <CustomFormProvider methods={methods}>
           <FormGrid formFieldsList={signinFormFieldData} />
         </CustomFormProvider>
-
+        <CommonButton onClick={showSnackbar}>Show Snackbar</CommonButton>
         <Box>
           <ItemAvatarCountCard
             name="Hi"
